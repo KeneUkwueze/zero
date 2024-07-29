@@ -20,6 +20,7 @@
     <origin xyz="0 0 0.0862" rpy="0 0 0" />
 </joint>
 
+<!-- ................................ MOBILE BASE .................................. -->
 
 
     <link name="mobile_base">
@@ -203,13 +204,12 @@
 
     </joint>
 
-    <link name="front_depthcamera">
-        <inertial>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <mass value="1e-9" />
-            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
-        </inertial>
-    </link>
+
+
+<!-- ................................ FRONT CAMERA .................................. -->
+
+
+    <link name="front_depthcamera"/>
     <joint name="front_depthcamera_frame" type="fixed">
         <origin xyz="-9.0288353571388313412e-08 -0.19999916474089063367 0.030885516604367363458"
             rpy="1.570796326794896558 -0 2.6124255799287991292e-16" />
@@ -218,13 +218,11 @@
         <axis xyz="0 0 0" />
     </joint>
 
-    <link name="lidar">
-        <inertial>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <mass value="1e-9" />
-            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
-        </inertial>
-    </link>
+
+<!-- ................................ LIDAR .................................. -->
+
+
+    <link name="lidar"/>
     <joint name="lidar_frame" type="fixed">
         <origin xyz="-0.00012191376555154009864 -2.8123243064170910799e-05 0.17509999999999997788"
             rpy="0 -0 0" />
@@ -233,13 +231,11 @@
         <axis xyz="0 0 0" />
     </joint>
 
-    <link name="back_depthcamera">
-        <inertial>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <mass value="1e-9" />
-            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
-        </inertial>
-    </link>
+
+    <!-- ................................ BACK DEPTH CAMERA .................................. -->
+
+
+    <link name="back_depthcamera"/>
     <joint name="back_depthcamera_frame" type="fixed">
         <origin xyz="-9.0288353654655040259e-08 0.19999916474089080021 0.030885516604367439786"
             rpy="1.570796326794896558 -0 -3.141592653589793116" />
@@ -248,13 +244,11 @@
         <axis xyz="0 0 0" />
     </joint>
 
-    <link name="imu">
-        <inertial>
-            <origin xyz="0 0 0" rpy="0 0 0" />
-            <mass value="1e-9" />
-            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
-        </inertial>
-    </link>
+
+    <!-- ................................ IMU .................................. -->
+
+
+    <link name="imu"/>
     <joint name="imu_frame" type="fixed">
         <origin xyz="1.2369906293673038927e-07 6.9982771244703201319e-09 0.14380000000000001115"
             rpy="0 -0 0" />
@@ -263,7 +257,10 @@
         <axis xyz="0 0 0" />
     </joint>
 
-    <link name="hub_motor_assembly">
+
+        <!-- ................................ LEFT WHEEL .................................. -->
+
+    <link name="left_wheel">
         <visual>
             <origin xyz="0 0 0.0068999999999999894751"
                 rpy="-1.570796326794896558 -1.095640146140279334e-32 0" />
@@ -322,13 +319,16 @@
         <origin xyz="0.11279999999999962279 -1.0939515695901098363e-14 -4.7878367936959875806e-15"
             rpy="-1.570796326794896558 -0 -1.5707963267948970021" />
         <parent link="mobile_base" />
-        <child link="hub_motor_assembly" />
+        <child link="left_wheel" />
         <axis xyz="0 0 1" />
         <limit effort="1" velocity="20" />
         <joint_properties friction="0.0" />
     </joint>
 
-    <link name="hub_motor_assembly_2">
+
+            <!-- ................................ RIGHT WHEEL .................................. -->
+
+    <link name="right_wheel">
         <visual>
             <origin xyz="0 0 0.0069000000000000033529" rpy="-1.570796326794896558 -0 0" />
             <geometry>
@@ -386,11 +386,14 @@
         <origin xyz="-0.1127999999999996783 -1.09371102126810778e-14 -4.7878367936959860029e-15"
             rpy="1.570796326794896558 -0 -1.570796326794896558" />
         <parent link="mobile_base" />
-        <child link="hub_motor_assembly_2" />
-        <axis xyz="0 0 1" />
+        <child link="right_wheel" />
+        <axis xyz="0 0 -1" />
         <limit effort="1" velocity="20" />
         <joint_properties friction="0.0" />
     </joint>
+
+
+            <!-- ................................ FRONT CASTER WHEEL  .................................. -->
 
     <link name="punch">
         <visual>
@@ -465,6 +468,10 @@
         <joint_properties friction="0.0" />
     </joint>
 
+
+    <!-- ................................ BACK CASTER WHEEL  .................................. -->
+
+
     <link name="punch_2">
         <visual>
             <origin xyz="0 -2.5948382798830522483e-18 -0.0025000000000000022204"
@@ -538,6 +545,10 @@
         <limit effort="1" velocity="20" />
         <joint_properties friction="0.0" />
     </joint>
+
+
+    <!-- ................................  PAYLOAD MODULE  .................................. -->
+
 
     <link name="payload_module">
         <visual>
