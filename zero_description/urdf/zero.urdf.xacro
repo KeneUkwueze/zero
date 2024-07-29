@@ -1,0 +1,737 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="zero">
+
+
+    <xacro:property name="package_name" value="zero_description" />
+    <xacro:property name="robot_name" value="zero" />
+
+
+
+
+<!-- ................................ BASE LINK .................................. -->
+
+<link name="base_footprint" />
+
+<link name="base_link" />
+
+<joint name="base_joint" type="fixed">
+    <parent link="base_footprint" />
+    <child link="base_link" />
+    <origin xyz="0 0 0.0862" rpy="0 0 0" />
+</joint>
+
+
+
+    <link name="mobile_base">
+        <visual>
+            <origin
+                xyz="-3.6134275424334747689e-17 -1.4263529772763714774e-18 -0.056199999999999999956"
+                rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/mobilebase_body.stl" />
+            </geometry>
+            <material name="mobilebase_body_material">
+                <color
+                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin xyz="0.18558108475551546301 0.050000000000000092981 0.12821891524448453259"
+                rpy="-4.6758354725030644238e-16 0.785398163397448279 -3.306314970319521967e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/push_button_-_yellow__list_rekxsjuglcxeoh_yellow.stl" />
+            </geometry>
+            <material name="push_button_-_yellow__list_rekxsjuglcxeoh_yellow_material">
+                <color
+                    rgba="0.70196078431372543882 0.70196078431372543882 0.70196078431372543882 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin xyz="0.18558108475551543526 1.1102230246251565404e-16 0.12821891524448456035"
+                rpy="-4.6758354725030644238e-16 0.785398163397448279 -3.306314970319521967e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/push_button_-_white__list_rekxsjuglcxeoh_white.stl" />
+            </geometry>
+            <material name="push_button_-_white__list_rekxsjuglcxeoh_white_material">
+                <color
+                    rgba="0.70196078431372543882 0.70196078431372543882 0.70196078431372543882 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin xyz="0.050580550725237344301 0.18540117237123723837 0.12839882762876278499"
+                rpy="-1.57079632679489678 -0.785398163397448279 1.57079632679489678" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/e_stop.stl" />
+            </geometry>
+            <material name="e_stop_material">
+                <color rgba="1 0 0 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin xyz="0.1855810847555154075 -0.04999999999999991257 0.12821891524448456035"
+                rpy="-4.6758354725030644238e-16 0.785398163397448279 -3.306314970319521967e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/push_button_-_red__list_rekxsjuglcxeoh_red.stl" />
+            </geometry>
+            <material name="push_button_-_red__list_rekxsjuglcxeoh_red_material">
+                <color
+                    rgba="0.70196078431372543882 0.70196078431372543882 0.70196078431372543882 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin xyz="-0.050013022320990196956 0.17818181985266631773 -0.010416397568953073005"
+                rpy="-1.5707963267948976682 -1.4835298641951801812 1.5707963267948976682" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/antenna.stl" />
+            </geometry>
+            <material name="antenna_material">
+                <color
+                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin xyz="2.2389104848756850518e-17 -0.14500000000000007327 -0.044199999999999996236"
+                rpy="1.570796326794896558 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/base.stl" />
+            </geometry>
+            <material name="base_material">
+                <color
+                    rgba="0.98039215686274505668 0.71372549019607844922 0.0039215686274509803377 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin xyz="0.00037417506994241733764 0.17799916474089080842 0.030885528513773852222"
+                rpy="-1.570796326794896558 -0 2.6124255799287991292e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/depth_camera.stl" />
+            </geometry>
+            <material name="depth_camera_material">
+                <color rgba="0.86666666666666669627 0.90980392156862743835 1 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin xyz="-0.07001302232099021472 0.17818181985266626222 -0.010416397568953184027"
+                rpy="-1.5707963267948976682 -1.4835298641951801812 1.5707963267948976682" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/antenna.stl" />
+            </geometry>
+            <material name="antenna_material">
+                <color
+                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin xyz="-0.18558108475551546301 -0.050000000000000030531 0.12821891524448453259"
+                rpy="4.6758354725030644238e-16 -0.785398163397448279 -3.306314970319521967e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/push_button_-_red__list_rekxsjuglcxeoh_red.stl" />
+            </geometry>
+            <material name="push_button_-_red__list_rekxsjuglcxeoh_red_material">
+                <color
+                    rgba="0.70196078431372543882 0.70196078431372543882 0.70196078431372543882 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin xyz="-0.1888691312880329265 0.07064999999999996283 0.10796030596349000252"
+                rpy="0.785398163397448279 1.9048415650792240013e-17 -1.5707963267948970021" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/battery_indicator.stl" />
+            </geometry>
+            <material name="battery_indicator_material">
+                <color
+                    rgba="0.97254901960784312376 0.52941176470588235947 0.0039215686274509803377 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin xyz="-9.5525017435414730954e-17 0.14500000000000001776 -0.044199999999999996236"
+                rpy="1.570796326794896558 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/base.stl" />
+            </geometry>
+            <material name="base_material">
+                <color
+                    rgba="0.98039215686274505668 0.71372549019607844922 0.0039215686274509803377 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin xyz="0.00037417506994250060437 -0.17799916474089066964 0.030885504694960957961"
+                rpy="1.570796326794896558 -0 2.6124255799287991292e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/depth_camera.stl" />
+            </geometry>
+            <material name="depth_camera_material">
+                <color rgba="0.86666666666666669627 0.90980392156862743835 1 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin xyz="1.2369906294378053566e-07 6.9982771141252420493e-09 0.14380000000000001115"
+                rpy="1.570796326794896558 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/lidar_lower.stl" />
+            </geometry>
+            <material name="lidar_lower_material">
+                <color
+                    rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin xyz="1.2369906294378053566e-07 6.9982771141252420493e-09 0.14380000000000001115"
+                rpy="1.570796326794896558 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/lidar_upper.stl" />
+            </geometry>
+            <material name="lidar_upper_material">
+                <color
+                    rgba="0.88235294117647056211 0.57254901960784310155 0.47843137254901962896 1.0" />
+            </material>
+        </visual>
+        <inertial>
+            <origin xyz="0.0025832041792662259645 0.00025148635105191804182 0.047819657753682694168"
+                rpy="0 0 0" />
+            <mass value="7.8674685914887625415" />
+            <inertia ixx="0.18329434197773372683" ixy="-0.00043336984297835835908"
+                ixz="-0.0015567268215315103845" iyy="0.18539574725265989263"
+                iyz="3.1553073465460739454e-06" izz="0.27426956785200118372" />
+        </inertial>
+    </link>
+
+    <joint name="chassis_joint" type="fixed">
+        <parent link="base_link" />
+        <child link="mobile_base" />
+        <origin xyz="0 0 0" rpy="0 0 0" />
+
+    </joint>
+
+    <link name="front_depthcamera">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="1e-9" />
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+        </inertial>
+    </link>
+    <joint name="front_depthcamera_frame" type="fixed">
+        <origin xyz="-9.0288353571388313412e-08 -0.19999916474089063367 0.030885516604367363458"
+            rpy="1.570796326794896558 -0 2.6124255799287991292e-16" />
+        <parent link="mobile_base" />
+        <child link="front_depthcamera" />
+        <axis xyz="0 0 0" />
+    </joint>
+
+    <link name="lidar">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="1e-9" />
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+        </inertial>
+    </link>
+    <joint name="lidar_frame" type="fixed">
+        <origin xyz="-0.00012191376555154009864 -2.8123243064170910799e-05 0.17509999999999997788"
+            rpy="0 -0 0" />
+        <parent link="mobile_base" />
+        <child link="lidar" />
+        <axis xyz="0 0 0" />
+    </joint>
+
+    <link name="back_depthcamera">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="1e-9" />
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+        </inertial>
+    </link>
+    <joint name="back_depthcamera_frame" type="fixed">
+        <origin xyz="-9.0288353654655040259e-08 0.19999916474089080021 0.030885516604367439786"
+            rpy="1.570796326794896558 -0 -3.141592653589793116" />
+        <parent link="mobile_base" />
+        <child link="back_depthcamera" />
+        <axis xyz="0 0 0" />
+    </joint>
+
+    <link name="imu">
+        <inertial>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <mass value="1e-9" />
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+        </inertial>
+    </link>
+    <joint name="imu_frame" type="fixed">
+        <origin xyz="1.2369906293673038927e-07 6.9982771244703201319e-09 0.14380000000000001115"
+            rpy="0 -0 0" />
+        <parent link="mobile_base" />
+        <child link="imu" />
+        <axis xyz="0 0 0" />
+    </joint>
+
+    <link name="hub_motor_assembly">
+        <visual>
+            <origin xyz="0 0 0.0068999999999999894751"
+                rpy="-1.570796326794896558 -1.095640146140279334e-32 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/hub_rim_back.stl" />
+            </geometry>
+            <material name="hub_rim_back_material">
+                <color
+                    rgba="0.97254901960784312376 0.52941176470588235947 0.0039215686274509803377 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin
+                xyz="1.1891665430141531362e-14 -2.0816681711721685133e-16 0.062200000000000005285"
+                rpy="3.141592653589793116 7.8260293421734858916e-17 2.7052603405912107881" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/hub_rim_face.stl" />
+            </geometry>
+            <material name="hub_rim_face_material">
+                <color
+                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin
+                xyz="1.1911660546815028402e-14 -2.0816681711721685133e-16 0.027249999999999940936"
+                rpy="1.570796326794896558 7.8260293421734858916e-17 2.7052603405912107881" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/hub_tire.stl" />
+            </geometry>
+            <material name="hub_tire_material">
+                <color
+                    rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin
+                xyz="1.1911660546815028402e-14 -2.0816681711721685133e-16 0.027249999999999940936"
+                rpy="1.570796326794896558 7.8260293421734858916e-17 2.7052603405912107881" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/hub_tire.stl" />
+            </geometry>
+        </collision>
+        <inertial>
+            <origin
+                xyz="-1.3049764084895811592e-05 -1.5445722338842022447e-05 0.029158262088622467767"
+                rpy="0 0 0" />
+            <mass value="3.6" />
+            <inertia ixx="0.0047791922365357838304" ixy="6.6810020091238174217e-08"
+                ixz="-1.1523277036879588643e-06" iyy="0.0047793038962806386194"
+                iyz="-2.2504285385980078606e-06" izz="0.0076835665583683942365" />
+        </inertial>
+    </link>
+
+    <joint name="left_wheel" type="continuous">
+        <origin xyz="0.11279999999999962279 -1.0939515695901098363e-14 -4.7878367936959875806e-15"
+            rpy="-1.570796326794896558 -0 -1.5707963267948970021" />
+        <parent link="mobile_base" />
+        <child link="hub_motor_assembly" />
+        <axis xyz="0 0 1" />
+        <limit effort="1" velocity="20" />
+        <joint_properties friction="0.0" />
+    </joint>
+
+    <link name="hub_motor_assembly_2">
+        <visual>
+            <origin xyz="0 0 0.0069000000000000033529" rpy="-1.570796326794896558 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/hub_rim_back.stl" />
+            </geometry>
+            <material name="hub_rim_back_material">
+                <color
+                    rgba="0.97254901960784312376 0.52941176470588235947 0.0039215686274509803377 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin
+                xyz="1.1934897514720447009e-14 -1.9428902930853780302e-16 0.062199999999999977529"
+                rpy="3.141592653589793116 -0 2.7052603405912831747" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/hub_rim_face.stl" />
+            </geometry>
+            <material name="hub_rim_face_material">
+                <color
+                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin
+                xyz="1.1934897514720447009e-14 -1.9428902930853780302e-16 0.027249999999999940936"
+                rpy="1.570796326794896558 -0 2.7052603405912831747" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/hub_tire.stl" />
+            </geometry>
+            <material name="hub_tire_material">
+                <color
+                    rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin
+                xyz="1.1934897514720447009e-14 -1.9428902930853780302e-16 0.027249999999999940936"
+                rpy="1.570796326794896558 -0 2.7052603405912831747" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/hub_tire.stl" />
+            </geometry>
+        </collision>
+        <inertial>
+            <origin
+                xyz="-1.3049764084863685326e-05 -1.5445722338831468416e-05 0.029158262088622460828"
+                rpy="0 0 0" />
+            <mass value="3.6" />
+            <inertia ixx="0.0047791922365357812283" ixy="6.6810020091308530891e-08"
+                ixz="-1.1523277036879194773e-06" iyy="0.0047793038962806386194"
+                iyz="-2.2504285385982145366e-06" izz="0.007683566558368390767" />
+        </inertial>
+    </link>
+
+    <joint name="right_wheel" type="continuous">
+        <origin xyz="-0.1127999999999996783 -1.09371102126810778e-14 -4.7878367936959860029e-15"
+            rpy="1.570796326794896558 -0 -1.570796326794896558" />
+        <parent link="mobile_base" />
+        <child link="hub_motor_assembly_2" />
+        <axis xyz="0 0 1" />
+        <limit effort="1" velocity="20" />
+        <joint_properties friction="0.0" />
+    </joint>
+
+    <link name="punch">
+        <visual>
+            <origin xyz="0 -2.5948382798830553298e-18 -0.0025000000000000022204"
+                rpy="-1.570796326794896558 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/punch.stl" />
+            </geometry>
+            <material name="punch_material">
+                <color
+                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
+            </material>
+        </visual>
+        <inertial>
+            <origin
+                xyz="-0.0068431393429968156647 0.00016629903576519705264 0.0086639006165598608789"
+                rpy="0 0 0" />
+            <mass value="0.024343445049394188406" />
+            <inertia ixx="3.936356037747538547e-06" ixy="2.905252369172614994e-08"
+                ixz="1.0442385645354997525e-06" iyy="3.838911052433835519e-06"
+                iyz="-5.7082949197628128451e-08" izz="3.4356958911218185951e-06" />
+        </inertial>
+    </link>
+
+    <link name="tire">
+        <visual>
+            <origin xyz="0.014000000000000005496 -0.024999999999999994449 6.2669134736146154163e-18"
+                rpy="3.141592653589793116 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/tire.stl" />
+            </geometry>
+            <material name="tire_material">
+                <color
+                    rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.014000000000000005496 -0.024999999999999994449 6.2669134736146154163e-18"
+                rpy="3.141592653589793116 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/tire.stl" />
+            </geometry>
+        </collision>
+        <inertial>
+            <origin
+                xyz="3.4390845804824210497e-08 -3.8281190356537209141e-08 5.1636314884790225824e-09"
+                rpy="0 0 0" />
+            <mass value="0.010111416214170885694" />
+            <inertia ixx="8.7315068601895152217e-07" ixy="-3.0554948669053773613e-13"
+                ixz="6.9548210849304582085e-13" iyy="8.7316124768737506048e-07"
+                iyz="-7.7415610040821401145e-13" izz="1.4095955784026028821e-06" />
+        </inertial>
+    </link>
+
+    <joint name="front_casterwheel" type="continuous">
+        <origin xyz="-0.014000000000000012434 -8.6011480390624823539e-19 0.022750000000000013267"
+            rpy="-1.570796326794896558 1.570796326794896336 0" />
+        <parent link="punch" />
+        <child link="tire" />
+        <axis xyz="0 0 1" />
+        <limit effort="1" velocity="20" />
+        <joint_properties friction="0.0" />
+    </joint>
+
+    <joint name="front_casterpunch" type="continuous">
+        <origin xyz="2.2389104848756847436e-17 -0.14500000000000007327 -0.046699999999999998457"
+            rpy="3.141592653589793116 -0 1.570796326794896558" />
+        <parent link="mobile_base" />
+        <child link="punch" />
+        <axis xyz="0 0 1" />
+        <limit effort="1" velocity="20" />
+        <joint_properties friction="0.0" />
+    </joint>
+
+    <link name="punch_2">
+        <visual>
+            <origin xyz="0 -2.5948382798830522483e-18 -0.0025000000000000022204"
+                rpy="-1.570796326794896558 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/punch.stl" />
+            </geometry>
+            <material name="punch_material">
+                <color
+                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
+            </material>
+        </visual>
+       
+        <inertial>
+            <origin
+                xyz="-0.0068431393429968156647 0.00016629903576519705264 0.0086639006165598608789"
+                rpy="0 0 0" />
+            <mass value="0.024343445049394188406" />
+            <inertia ixx="3.936356037747538547e-06" ixy="2.905252369172614994e-08"
+                ixz="1.0442385645354997525e-06" iyy="3.838911052433835519e-06"
+                iyz="-5.7082949197628128451e-08" izz="3.4356958911218185951e-06" />
+        </inertial>
+    </link>
+
+    <link name="tire_2">
+        <visual>
+            <origin xyz="0.013999999999999998557 -0.024999999999999994449 6.2669134736146092533e-18"
+                rpy="3.141592653589793116 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/tire.stl" />
+            </geometry>
+            <material name="tire_material">
+                <color
+                    rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.013999999999999998557 -0.024999999999999994449 6.2669134736146092533e-18"
+                rpy="3.141592653589793116 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/tire.stl" />
+            </geometry>
+        </collision>
+        <inertial>
+            <origin
+                xyz="3.4390845797885316593e-08 -3.8281190356537209141e-08 5.1636314884790225824e-09"
+                rpy="0 0 0" />
+            <mass value="0.010111416214170885694" />
+            <inertia ixx="8.7315068601895152217e-07" ixy="-3.0554948669053773613e-13"
+                ixz="6.9548210849304582085e-13" iyy="8.7316124768737506048e-07"
+                iyz="-7.7415610040821401145e-13" izz="1.4095955784026028821e-06" />
+        </inertial>
+    </link>
+
+    <joint name="back_casterwheel" type="continuous">
+        <origin xyz="-0.014000000000000012434 -8.601148039062451539e-19 0.022749999999999999389"
+            rpy="-1.570796326794896558 -1.570796326794896336 0" />
+        <parent link="punch_2" />
+        <child link="tire_2" />
+        <axis xyz="0 0 1" />
+        <limit effort="1" velocity="20" />
+        <joint_properties friction="0.0" />
+    </joint>
+
+    <joint name="back_casterpunch" type="continuous">
+        <origin xyz="-9.5525017435414730954e-17 0.14500000000000001776 -0.046699999999999998457"
+            rpy="3.141592653589793116 -0 -1.570796326794896558" />
+        <parent link="mobile_base" />
+        <child link="punch_2" />
+        <axis xyz="0 0 1" />
+        <limit effort="1" velocity="20" />
+        <joint_properties friction="0.0" />
+    </joint>
+
+    <link name="payload_module">
+        <visual>
+            <origin
+                xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
+                rpy="-1.6653345369377353037e-16 2.3453346881756870093e-17 6.0540737700961713084e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/standoff2.stl" />
+            </geometry>
+            <material name="standoff2_material">
+                <color rgba="0 0 0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin
+                xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
+                rpy="-1.6653345369377353037e-16 2.3453346881756870093e-17 6.0540737700961713084e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/standoff2.stl" />
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="-1.9645968037643526314e-08 2.2406632246638525398e-07 -0.25" rpy="0 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/payload_system.stl" />
+            </geometry>
+            <material name="payload_system_material">
+                <color
+                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
+            </material>
+        </visual>
+        <!-- Shapes for payload_system -->
+        <collision>
+            <origin xyz="0.1689999803540319645 2.2406632246638525398e-07 0.45199999999999995737"
+                rpy="-1.570796326794896558 -0 -1.57079632679489678" />
+            <geometry>
+                <box size="0.34000000000000002442 0.90400000000000002576 0.0020000000000000000416" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.1689999803540319645 2.2406632246638525398e-07 0.45199999999999995737"
+                rpy="1.570796326794896558 -0 1.570796326794896558" />
+            <geometry>
+                <box size="0.34000000000000002442 0.90400000000000002576 0.0020000000000000000416" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-1.9645968065399101929e-08 0.16900022406632247973 0.45199999999999995737"
+                rpy="-1.570796326794896558 -0 9.2799399999999996335e-17" />
+            <geometry>
+                <box size="0.34000000000000002442 0.90400000000000002576 0.0020000000000000000416" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.16900001964596805815 2.2406632246638525398e-07 0.45199999999999995737"
+                rpy="-1.570796326794896558 -0 1.570796326794896558" />
+            <geometry>
+                <box size="0.34000000000000002442 0.90400000000000002576 0.0020000000000000000416" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-1.9645968009887950698e-08 -0.16899977593367751516 0.45199999999999995737"
+                rpy="-1.570796326794896558 -0 -3.141592653589793116" />
+            <geometry>
+                <box size="0.34000000000000002442 0.90400000000000002576 0.0020000000000000000416" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-0.19900001964596805704 2.2406632241087410275e-07 -0.14999999999999999445"
+                rpy="-1.570796326794896558 -0 1.5707963267948970021" />
+            <geometry>
+                <box size="0.4000000000000000222 0.2000000000000000111 0.0020000000000000000416" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-1.9645967982132375082e-08 -0.19899977593367754181 -0.14999999999999999445"
+                rpy="-1.570796326794896558 -0 -3.141592653589793116" />
+            <geometry>
+                <box size="0.4000000000000000222 0.2000000000000000111 0.0020000000000000000416" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="0.19899998035403196339 2.2406632252189640522e-07 -0.14999999999999999445"
+                rpy="-1.570796326794896558 -0 -1.570796326794896336" />
+            <geometry>
+                <box size="0.4000000000000000222 0.2000000000000000111 0.0020000000000000000416" />
+            </geometry>
+        </collision>
+        <collision>
+            <origin xyz="-1.9645968093154677545e-08 0.19900022406632247862 -0.14999999999999999445"
+                rpy="-1.570796326794896558 -0 2.6124299999999998341e-16" />
+            <geometry>
+                <box size="0.4000000000000000222 0.2000000000000000111 0.0020000000000000000416" />
+            </geometry>
+        </collision>
+        <visual>
+            <origin
+                xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
+                rpy="-1.6653345369377353037e-16 2.3453346881756870093e-17 6.0540737700961713084e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/tray.stl" />
+            </geometry>
+            <material name="tray_material">
+                <color
+                    rgba="0.37254901960784314596 0.38039215686274507888 0.38039215686274507888 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin
+                xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
+                rpy="-1.6653345369377353037e-16 2.3453346881756870093e-17 6.0540737700961713084e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/standoff4.stl" />
+            </geometry>
+            <material name="standoff4_material">
+                <color rgba="0 0 0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin
+                xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
+                rpy="-1.6653345369377353037e-16 2.3453346881756870093e-17 6.0540737700961713084e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/standoff4.stl" />
+            </geometry>
+        </collision>
+        <visual>
+            <origin
+                xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
+                rpy="-1.6653345369377353037e-16 2.3453346881756870093e-17 6.0540737700961713084e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/standoff1.stl" />
+            </geometry>
+            <material name="standoff1_material">
+                <color rgba="0 0 0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin
+                xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
+                rpy="-1.6653345369377353037e-16 2.3453346881756870093e-17 6.0540737700961713084e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/standoff1.stl" />
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="-1.0220779062274279544e-07 -0.13110197580579463494 0.77193457342055249448"
+                rpy="1.1344640137963146742 -0 5.5511151231257836882e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/display.stl" />
+            </geometry>
+            <material name="display_material">
+                <color
+                    rgba="0.56470588235294116863 0.56470588235294116863 0.56470588235294116863 1.0" />
+            </material>
+        </visual>
+        <visual>
+            <origin
+                xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
+                rpy="-1.6653345369377353037e-16 2.3453346881756870093e-17 6.0540737700961713084e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/standoff3.stl" />
+            </geometry>
+            <material name="standoff3_material">
+                <color rgba="0 0 0 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin
+                xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
+                rpy="-1.6653345369377353037e-16 2.3453346881756870093e-17 6.0540737700961713084e-16" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/standoff3.stl" />
+            </geometry>
+        </collision>
+        <inertial>
+            <origin xyz="-3.7495602146508909822e-06 0.017289307058686011198 0.59395703720064196851"
+                rpy="0 0 0" />
+            <mass value="17.00660133760975512" />
+            <inertia ixx="1.7825536787310567455" ixy="-1.1653610391053570395e-05"
+                ixz="9.2066691289708658952e-06" iyy="1.8011830810656086488"
+                iyz="-0.068939903648615102894" izz="0.45117113700389976927" />
+        </inertial>
+    </link>
+
+    <joint name="payload_module" type="fixed">
+        <origin xyz="1.2369906294766153475e-07 6.9982771159363573092e-09 0.19380000000000000004"
+            rpy="0 -0 0" />
+        <parent link="mobile_base" />
+        <child link="payload_module" />
+        <axis xyz="0 0 1" />
+        <limit effort="1" velocity="20" />
+        <joint_properties friction="0.0" />
+    </joint>
+
+
+</robot>
