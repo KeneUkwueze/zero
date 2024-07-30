@@ -31,10 +31,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/mobilebase_body.dae" />
             </geometry>
-            <material name="mobilebase_body_material">
-                <color
-                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
-            </material>
         </visual>
         <visual>
             <origin xyz="0.18558108475551546301 0.050000000000000092981 0.12821891524448453259"
@@ -42,10 +38,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/push_button_yellow.dae" />
             </geometry>
-            <material name="push_button_yellow_material">
-                <color
-                    rgba="0.70196078431372543882 0.70196078431372543882 0.70196078431372543882 1.0" />
-            </material>
         </visual>
         <visual>
             <origin xyz="0.18558108475551543526 1.1102230246251565404e-16 0.12821891524448456035"
@@ -53,10 +45,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/push_button_white.dae" />
             </geometry>
-            <material name="push_button_white_material">
-                <color
-                    rgba="0.70196078431372543882 0.70196078431372543882 0.70196078431372543882 1.0" />
-            </material>
         </visual>
         <visual>
             <origin xyz="0.050580550725237344301 0.18540117237123723837 0.12839882762876278499"
@@ -64,9 +52,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/e_stop.dae" />
             </geometry>
-            <material name="e_stop_material">
-                <color rgba="1 0 0 1.0" />
-            </material>
         </visual>
         <visual>
             <origin xyz="0.1855810847555154075 -0.04999999999999991257 0.12821891524448456035"
@@ -74,10 +59,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/push_button_red.dae" />
             </geometry>
-            <material name="push_button_red_material">
-                <color
-                    rgba="0.70196078431372543882 0.70196078431372543882 0.70196078431372543882 1.0" />
-            </material>
         </visual>
         <visual>
             <origin xyz="-0.050013022320990196956 0.17818181985266631773 -0.010416397568953073005"
@@ -85,10 +66,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/antenna.dae" />
             </geometry>
-            <material name="antenna_material">
-                <color
-                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
-            </material>
         </visual>
         <visual>
             <origin xyz="2.2389104848756850518e-17 -0.14500000000000007327 -0.044199999999999996236"
@@ -96,10 +73,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/base.dae" />
             </geometry>
-            <material name="base_material">
-                <color
-                    rgba="0.98039215686274505668 0.71372549019607844922 0.0039215686274509803377 1.0" />
-            </material>
         </visual>
         <visual>
             <origin xyz="0.00037417506994241733764 0.17799916474089080842 0.030885528513773852222"
@@ -107,9 +80,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/depth_camera.dae" />
             </geometry>
-            <material name="depth_camera_material">
-                <color rgba="0.86666666666666669627 0.90980392156862743835 1 1.0" />
-            </material>
         </visual>
         <visual>
             <origin xyz="-0.07001302232099021472 0.17818181985266626222 -0.010416397568953184027"
@@ -117,10 +87,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/antenna.dae" />
             </geometry>
-            <material name="antenna_material">
-                <color
-                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
-            </material>
         </visual>
         <visual>
             <origin xyz="-0.18558108475551546301 -0.050000000000000030531 0.12821891524448453259"
@@ -128,10 +94,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/push_button_red.dae" />
             </geometry>
-            <material name="push_button_red_material">
-                <color
-                    rgba="0.70196078431372543882 0.70196078431372543882 0.70196078431372543882 1.0" />
-            </material>
         </visual>
         <visual>
             <origin xyz="-0.1888691312880329265 0.07064999999999996283 0.10796030596349000252"
@@ -139,10 +101,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/battery_indicator.dae" />
             </geometry>
-            <material name="battery_indicator_material">
-                <color
-                    rgba="0.97254901960784312376 0.52941176470588235947 0.0039215686274509803377 1.0" />
-            </material>
         </visual>
         <visual>
             <origin xyz="-9.5525017435414730954e-17 0.14500000000000001776 -0.044199999999999996236"
@@ -150,10 +108,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/base.dae" />
             </geometry>
-            <material name="base_material">
-                <color
-                    rgba="0.98039215686274505668 0.71372549019607844922 0.0039215686274509803377 1.0" />
-            </material>
         </visual>
         <visual>
             <origin xyz="0.00037417506994250060437 -0.17799916474089066964 0.030885504694960957961"
@@ -161,9 +115,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/depth_camera.dae" />
             </geometry>
-            <material name="depth_camera_material">
-                <color rgba="0.86666666666666669627 0.90980392156862743835 1 1.0" />
-            </material>
         </visual>
         <visual>
             <origin xyz="1.2369906294378053566e-07 6.9982771141252420493e-09 0.14380000000000001115"
@@ -171,10 +122,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/lidar_lower.dae" />
             </geometry>
-            <material name="lidar_lower_material">
-                <color
-                    rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0" />
-            </material>
         </visual>
         <visual>
             <origin xyz="1.2369906294378053566e-07 6.9982771141252420493e-09 0.14380000000000001115"
@@ -182,15 +129,11 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/lidar_upper.dae" />
             </geometry>
-            <material name="lidar_upper_material">
-                <color
-                    rgba="0.88235294117647056211 0.57254901960784310155 0.47843137254901962896 1.0" />
-            </material>
         </visual>
         <inertial>
             <origin xyz="0.0025832041792662259645 0.00025148635105191804182 0.047819657753682694168"
                 rpy="0 0 0" />
-            <mass value="7.8674685914887625415" />
+            <mass value="15.8674685914887625415" />
             <inertia ixx="0.18329434197773372683" ixy="-0.00043336984297835835908"
                 ixz="-0.0015567268215315103845" iyy="0.18539574725265989263"
                 iyz="3.1553073465460739454e-06" izz="0.27426956785200118372" />
@@ -267,10 +210,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/hub_rim_back.dae" />
             </geometry>
-            <material name="hub_rim_back_material">
-                <color
-                    rgba="0.97254901960784312376 0.52941176470588235947 0.0039215686274509803377 1.0" />
-            </material>
         </visual>
         <visual>
             <origin
@@ -279,10 +218,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/hub_rim_face.dae" />
             </geometry>
-            <material name="hub_rim_face_material">
-                <color
-                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
-            </material>
         </visual>
         <visual>
             <origin
@@ -291,10 +226,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/hub_tire.dae" />
             </geometry>
-            <material name="hub_tire_material">
-                <color
-                    rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0" />
-            </material>
         </visual>
         <collision>
             <origin
@@ -334,10 +265,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/hub_rim_back.dae" />
             </geometry>
-            <material name="hub_rim_back_material">
-                <color
-                    rgba="0.97254901960784312376 0.52941176470588235947 0.0039215686274509803377 1.0" />
-            </material>
         </visual>
         <visual>
             <origin
@@ -346,10 +273,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/hub_rim_face.dae" />
             </geometry>
-            <material name="hub_rim_face_material">
-                <color
-                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
-            </material>
         </visual>
         <visual>
             <origin
@@ -358,10 +281,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/hub_tire.dae" />
             </geometry>
-            <material name="hub_tire_material">
-                <color
-                    rgba="0.64705882352941179736 0.64705882352941179736 0.64705882352941179736 1.0" />
-            </material>
         </visual>
         <collision>
             <origin
@@ -402,10 +321,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/punch.dae" />
             </geometry>
-            <material name="punch_material">
-                <color
-                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
-            </material>
         </visual>
         <inertial>
             <origin
@@ -425,10 +340,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/tire.dae" />
             </geometry>
-            <material name="tire_material">
-                <color
-                    rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0" />
-            </material>
         </visual>
         <collision>
             <origin xyz="0.014000000000000005496 -0.024999999999999994449 6.2669134736146154163e-18"
@@ -479,10 +390,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/punch.dae" />
             </geometry>
-            <material name="punch_material">
-                <color
-                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
-            </material>
         </visual>
        
         <inertial>
@@ -503,10 +410,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/tire.dae" />
             </geometry>
-            <material name="tire_material">
-                <color
-                    rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0" />
-            </material>
         </visual>
         <collision>
             <origin xyz="0.013999999999999998557 -0.024999999999999994449 6.2669134736146092533e-18"
@@ -558,9 +461,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/standoff2.dae" />
             </geometry>
-            <material name="standoff2_material">
-                <color rgba="0 0 0 1.0" />
-            </material>
         </visual>
         <collision>
             <origin
@@ -575,10 +475,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/payload_system.dae" />
             </geometry>
-            <material name="payload_system_material">
-                <color
-                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
-            </material>
         </visual>
         <!-- Shapes for payload_system -->
         <collision>
@@ -651,10 +547,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/tray.dae" />
             </geometry>
-            <material name="tray_material">
-                <color
-                    rgba="0.37254901960784314596 0.38039215686274507888 0.38039215686274507888 1.0" />
-            </material>
         </visual>
         <visual>
             <origin
@@ -663,9 +555,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/standoff4.dae" />
             </geometry>
-            <material name="standoff4_material">
-                <color rgba="0 0 0 1.0" />
-            </material>
         </visual>
         <collision>
             <origin
@@ -682,9 +571,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/standoff1.dae" />
             </geometry>
-            <material name="standoff1_material">
-                <color rgba="0 0 0 1.0" />
-            </material>
         </visual>
         <collision>
             <origin
@@ -700,10 +586,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/display.dae" />
             </geometry>
-            <material name="display_material">
-                <color
-                    rgba="0.56470588235294116863 0.56470588235294116863 0.56470588235294116863 1.0" />
-            </material>
         </visual>
         <visual>
             <origin
@@ -712,9 +594,6 @@
             <geometry>
                 <mesh filename="package://zero_description/meshes/standoff3.dae" />
             </geometry>
-            <material name="standoff3_material">
-                <color rgba="0 0 0 1.0" />
-            </material>
         </visual>
         <collision>
             <origin
@@ -727,7 +606,7 @@
         <inertial>
             <origin xyz="-3.7495602146508909822e-06 0.017289307058686011198 0.59395703720064196851"
                 rpy="0 0 0" />
-            <mass value="17.00660133760975512" />
+            <mass value="5.00660133760975512" />
             <inertia ixx="1.7825536787310567455" ixy="-1.1653610391053570395e-05"
                 ixz="9.2066691289708658952e-06" iyy="1.8011830810656086488"
                 iyz="-0.068939903648615102894" izz="0.45117113700389976927" />
