@@ -29,105 +29,7 @@
                 xyz="-3.6134275424334747689e-17 -1.4263529772763714774e-18 -0.056199999999999999956"
                 rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://zero_description/meshes/mobilebase_body.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin xyz="0.18558108475551546301 0.050000000000000092981 0.12821891524448453259"
-                rpy="-4.6758354725030644238e-16 0.785398163397448279 -3.306314970319521967e-16" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/push_button_yellow.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin xyz="0.18558108475551543526 1.1102230246251565404e-16 0.12821891524448456035"
-                rpy="-4.6758354725030644238e-16 0.785398163397448279 -3.306314970319521967e-16" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/push_button_white.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin xyz="0.050580550725237344301 0.18540117237123723837 0.12839882762876278499"
-                rpy="-1.57079632679489678 -0.785398163397448279 1.57079632679489678" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/e_stop.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin xyz="0.1855810847555154075 -0.04999999999999991257 0.12821891524448456035"
-                rpy="-4.6758354725030644238e-16 0.785398163397448279 -3.306314970319521967e-16" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/push_button_red.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin xyz="-0.050013022320990196956 0.17818181985266631773 -0.010416397568953073005"
-                rpy="-1.5707963267948976682 -1.4835298641951801812 1.5707963267948976682" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/antenna.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin xyz="2.2389104848756850518e-17 -0.14500000000000007327 -0.044199999999999996236"
-                rpy="1.570796326794896558 -0 0" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/base.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin xyz="0.00037417506994241733764 0.17799916474089080842 0.030885528513773852222"
-                rpy="-1.570796326794896558 -0 2.6124255799287991292e-16" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/depth_camera.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin xyz="-0.07001302232099021472 0.17818181985266626222 -0.010416397568953184027"
-                rpy="-1.5707963267948976682 -1.4835298641951801812 1.5707963267948976682" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/antenna.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin xyz="-0.18558108475551546301 -0.050000000000000030531 0.12821891524448453259"
-                rpy="4.6758354725030644238e-16 -0.785398163397448279 -3.306314970319521967e-16" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/push_button_red.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin xyz="-0.1888691312880329265 0.07064999999999996283 0.10796030596349000252"
-                rpy="0.785398163397448279 1.9048415650792240013e-17 -1.5707963267948970021" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/battery_indicator.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin xyz="-9.5525017435414730954e-17 0.14500000000000001776 -0.044199999999999996236"
-                rpy="1.570796326794896558 -0 0" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/base.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin xyz="0.00037417506994250060437 -0.17799916474089066964 0.030885504694960957961"
-                rpy="1.570796326794896558 -0 2.6124255799287991292e-16" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/depth_camera.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin xyz="1.2369906294378053566e-07 6.9982771141252420493e-09 0.14380000000000001115"
-                rpy="1.570796326794896558 -0 0" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/lidar_lower.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin xyz="1.2369906294378053566e-07 6.9982771141252420493e-09 0.14380000000000001115"
-                rpy="1.570796326794896558 -0 0" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/lidar_upper.dae" />
+                <mesh filename="package://zero_description/meshes/zero_mobile_base.dae" />
             </geometry>
         </visual>
         <inertial>
@@ -205,26 +107,11 @@
 
     <link name="left_wheel">
         <visual>
-            <origin xyz="0 0 0.0068999999999999894751"
-                rpy="-1.570796326794896558 -1.095640146140279334e-32 0" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/hub_rim_back.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin
-                xyz="1.1891665430141531362e-14 -2.0816681711721685133e-16 0.062200000000000005285"
-                rpy="3.141592653589793116 7.8260293421734858916e-17 2.7052603405912107881" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/hub_rim_face.dae" />
-            </geometry>
-        </visual>
-        <visual>
             <origin
                 xyz="1.1911660546815028402e-14 -2.0816681711721685133e-16 0.027249999999999940936"
                 rpy="1.570796326794896558 7.8260293421734858916e-17 2.7052603405912107881" />
             <geometry>
-                <mesh filename="package://zero_description/meshes/hub_tire.dae" />
+                <mesh filename="package://zero_description/meshes/hub_wheel.dae" />
             </geometry>
         </visual>
         <collision>
@@ -232,7 +119,7 @@
                 xyz="1.1911660546815028402e-14 -2.0816681711721685133e-16 0.027249999999999940936"
                 rpy="1.570796326794896558 7.8260293421734858916e-17 2.7052603405912107881" />
             <geometry>
-                <mesh filename="package://zero_description/meshes/hub_tire.dae" />
+                <mesh filename="package://zero_description/meshes/hub_wheel.dae" />
             </geometry>
         </collision>
         <inertial>
@@ -261,25 +148,11 @@
 
     <link name="right_wheel">
         <visual>
-            <origin xyz="0 0 0.0069000000000000033529" rpy="-1.570796326794896558 -0 0" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/hub_rim_back.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin
-                xyz="1.1934897514720447009e-14 -1.9428902930853780302e-16 0.062199999999999977529"
-                rpy="3.141592653589793116 -0 2.7052603405912831747" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/hub_rim_face.dae" />
-            </geometry>
-        </visual>
-        <visual>
             <origin
                 xyz="1.1934897514720447009e-14 -1.9428902930853780302e-16 0.027249999999999940936"
                 rpy="1.570796326794896558 -0 2.7052603405912831747" />
             <geometry>
-                <mesh filename="package://zero_description/meshes/hub_tire.dae" />
+                <mesh filename="package://zero_description/meshes/hub_wheel.dae" />
             </geometry>
         </visual>
         <collision>
@@ -287,7 +160,7 @@
                 xyz="1.1934897514720447009e-14 -1.9428902930853780302e-16 0.027249999999999940936"
                 rpy="1.570796326794896558 -0 2.7052603405912831747" />
             <geometry>
-                <mesh filename="package://zero_description/meshes/hub_tire.dae" />
+                <mesh filename="package://zero_description/meshes/hub_wheel.dae" />
             </geometry>
         </collision>
         <inertial>
@@ -454,14 +327,6 @@
 
 
     <link name="payload_module">
-        <visual>
-            <origin
-                xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
-                rpy="-1.6653345369377353037e-16 2.3453346881756870093e-17 6.0540737700961713084e-16" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/standoff2.dae" />
-            </geometry>
-        </visual>
         <collision>
             <origin
                 xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
@@ -473,9 +338,10 @@
         <visual>
             <origin xyz="-1.9645968037643526314e-08 2.2406632246638525398e-07 -0.25" rpy="0 -0 0" />
             <geometry>
-                <mesh filename="package://zero_description/meshes/payload_system.dae" />
+                <mesh filename="package://zero_description/meshes/zero_payload_system.dae" />
             </geometry>
         </visual>
+        
         <!-- Shapes for payload_system -->
         <collision>
             <origin xyz="0.1689999803540319645 2.2406632246638525398e-07 0.45199999999999995737"
@@ -540,22 +406,6 @@
                 <box size="0.4000000000000000222 0.2000000000000000111 0.0020000000000000000416" />
             </geometry>
         </collision>
-        <visual>
-            <origin
-                xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
-                rpy="-1.6653345369377353037e-16 2.3453346881756870093e-17 6.0540737700961713084e-16" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/tray.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin
-                xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
-                rpy="-1.6653345369377353037e-16 2.3453346881756870093e-17 6.0540737700961713084e-16" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/standoff4.dae" />
-            </geometry>
-        </visual>
         <collision>
             <origin
                 xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
@@ -564,14 +414,6 @@
                 <mesh filename="package://zero_description/meshes/standoff4.dae" />
             </geometry>
         </collision>
-        <visual>
-            <origin
-                xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
-                rpy="-1.6653345369377353037e-16 2.3453346881756870093e-17 6.0540737700961713084e-16" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/standoff1.dae" />
-            </geometry>
-        </visual>
         <collision>
             <origin
                 xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
@@ -580,21 +422,6 @@
                 <mesh filename="package://zero_description/meshes/standoff1.dae" />
             </geometry>
         </collision>
-        <visual>
-            <origin xyz="-1.0220779062274279544e-07 -0.13110197580579463494 0.77193457342055249448"
-                rpy="1.1344640137963146742 -0 5.5511151231257836882e-16" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/display.dae" />
-            </geometry>
-        </visual>
-        <visual>
-            <origin
-                xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
-                rpy="-1.6653345369377353037e-16 2.3453346881756870093e-17 6.0540737700961713084e-16" />
-            <geometry>
-                <mesh filename="package://zero_description/meshes/standoff3.dae" />
-            </geometry>
-        </visual>
         <collision>
             <origin
                 xyz="-1.9645968147830495471e-08 2.2406632255051934257e-07 -0.25000000000000022204"
