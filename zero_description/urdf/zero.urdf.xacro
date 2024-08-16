@@ -67,12 +67,12 @@
 <!-- ................................ LIDAR .................................. -->
 
 
-    <link name="lidar"/>
-    <joint name="lidar_frame" type="fixed">
+    <link name="rplidar_laser_link"/>
+    <joint name="rplidar_laser_joint" type="fixed">
         <origin xyz="-0.00012191376555154009864 -2.8123243064170910799e-05 0.17509999999999997788"
             rpy="0 -0 0" />
         <parent link="mobile_base" />
-        <child link="lidar" />
+        <child link="rplidar_laser_link" />
         <axis xyz="0 0 0" />
     </joint>
 
@@ -133,7 +133,7 @@
         </inertial>
     </link>
 
-    <joint name="left_wheel" type="continuous">
+    <joint name="left_wheel_joint" type="continuous">
         <origin xyz="0.11279999999999962279 -1.0939515695901098363e-14 -4.7878367936959875806e-15"
             rpy="-1.570796326794896558 -0 -1.5707963267948970021" />
         <parent link="mobile_base" />
@@ -174,7 +174,7 @@
         </inertial>
     </link>
 
-    <joint name="right_wheel" type="continuous">
+    <joint name="right_wheel_joint" type="continuous">
         <origin xyz="-0.1127999999999996783 -1.09371102126810778e-14 -4.7878367936959860029e-15"
             rpy="1.570796326794896558 -0 -1.570796326794896558" />
         <parent link="mobile_base" />
@@ -232,7 +232,7 @@
         </inertial>
     </link>
 
-    <joint name="front_casterwheel" type="continuous">
+    <joint name="frontcaster_wheel_joint" type="continuous">
         <origin xyz="-0.014000000000000012434 -8.6011480390624823539e-19 0.022750000000000013267"
             rpy="-1.570796326794896558 1.570796326794896336 0" />
         <parent link="punch" />
@@ -242,7 +242,7 @@
         <joint_properties friction="0.0" />
     </joint>
 
-    <joint name="front_casterpunch" type="continuous">
+    <joint name="frontcaster_rotation_joint" type="continuous">
         <origin xyz="2.2389104848756847436e-17 -0.14500000000000007327 -0.046699999999999998457"
             rpy="3.141592653589793116 -0 1.570796326794896558" />
         <parent link="mobile_base" />
@@ -302,7 +302,7 @@
         </inertial>
     </link>
 
-    <joint name="back_casterwheel" type="continuous">
+    <joint name="backcaster_wheel_joint" type="continuous">
         <origin xyz="-0.014000000000000012434 -8.601148039062451539e-19 0.022749999999999999389"
             rpy="-1.570796326794896558 -1.570796326794896336 0" />
         <parent link="punch_2" />
@@ -312,7 +312,7 @@
         <joint_properties friction="0.0" />
     </joint>
 
-    <joint name="back_casterpunch" type="continuous">
+    <joint name="backcaster_rotation_joint" type="continuous">
         <origin xyz="-9.5525017435414730954e-17 0.14500000000000001776 -0.046699999999999998457"
             rpy="3.141592653589793116 -0 -1.570796326794896558" />
         <parent link="mobile_base" />
