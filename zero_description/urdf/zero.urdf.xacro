@@ -185,37 +185,47 @@
     </joint>
 
 
-            <!-- ................................ FRONT CASTER WHEEL  .................................. -->
+            <!-- ................................ FRONT CASTER WHEELS  .................................. -->
+
+
+
 
     <link name="punch">
         <visual>
-            <origin xyz="0 -2.5948382798830553298e-18 -0.0025000000000000022204"
-                rpy="-1.570796326794896558 -0 0" />
+            <origin xyz="0 0 -0.0025000000000000022204" rpy="-1.570796326794896558 -0 0" />
             <geometry>
                 <mesh filename="package://zero_description/meshes/punch.dae" />
             </geometry>
+            <material name="punch_material">
+                <color
+                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
+            </material>
         </visual>
         <inertial>
             <origin
-                xyz="-0.0068431393429968156647 0.00016629903576519705264 0.0086639006165598608789"
+                xyz="-0.0068431393429968147973 0.00016629903576520025103 0.0086639006165598608789"
                 rpy="0 0 0" />
             <mass value="0.024343445049394188406" />
-            <inertia ixx="3.936356037747538547e-06" ixy="2.905252369172614994e-08"
-                ixz="1.0442385645354997525e-06" iyy="3.838911052433835519e-06"
-                iyz="-5.7082949197628128451e-08" izz="3.4356958911218185951e-06" />
+            <inertia ixx="3.936356037747538547e-06" ixy="2.9052523691726126779e-08"
+                ixz="1.044238564535499329e-06" iyy="3.838911052433837213e-06"
+                iyz="-5.708294919762820786e-08" izz="3.4356958911218185951e-06" />
         </inertial>
     </link>
 
     <link name="tire">
         <visual>
-            <origin xyz="0.014000000000000005496 -0.024999999999999994449 6.2669134736146154163e-18"
+            <origin xyz="0.014000000000000005496 -0.024999999999999994449 1.3877787807814456755e-17"
                 rpy="3.141592653589793116 -0 0" />
             <geometry>
                 <mesh filename="package://zero_description/meshes/tire.dae" />
             </geometry>
+            <material name="tire_material">
+                <color
+                    rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0" />
+            </material>
         </visual>
         <collision>
-            <origin xyz="0.014000000000000005496 -0.024999999999999994449 6.2669134736146154163e-18"
+            <origin xyz="0.014000000000000005496 -0.024999999999999994449 1.3877787807814456755e-17"
                 rpy="3.141592653589793116 -0 0" />
             <geometry>
                 <mesh filename="package://zero_description/meshes/tire.dae" />
@@ -223,17 +233,17 @@
         </collision>
         <inertial>
             <origin
-                xyz="3.4390845804824210497e-08 -3.8281190356537209141e-08 5.1636314884790225824e-09"
+                xyz="3.4390845804824210497e-08 -3.8281190356537209141e-08 5.1636314962080038387e-09"
                 rpy="0 0 0" />
-            <mass value="0.010111416214170885694" />
+            <mass value="0.010111416214170887429" />
             <inertia ixx="8.7315068601895152217e-07" ixy="-3.0554948669053773613e-13"
-                ixz="6.9548210849304582085e-13" iyy="8.7316124768737506048e-07"
-                iyz="-7.7415610040821401145e-13" izz="1.4095955784026028821e-06" />
+                ixz="6.954821084930460228e-13" iyy="8.731612476873749546e-07"
+                iyz="-7.7415610040821411242e-13" izz="1.4095955784026028821e-06" />
         </inertial>
     </link>
 
-    <joint name="frontcaster_wheel_joint" type="continuous">
-        <origin xyz="-0.014000000000000012434 -8.6011480390624823539e-19 0.022750000000000013267"
+    <joint name="frontright_casterwheel_joint" type="continuous">
+        <origin xyz="-0.014000000000000012434 0 0.022749999999999999389"
             rpy="-1.570796326794896558 1.570796326794896336 0" />
         <parent link="punch" />
         <child link="tire" />
@@ -242,8 +252,8 @@
         <joint_properties friction="0.0" />
     </joint>
 
-    <joint name="frontcaster_rotation_joint" type="continuous">
-        <origin xyz="2.2389104848756847436e-17 -0.14500000000000007327 -0.046699999999999998457"
+    <joint name="frontrightcaster_rotation_joint" type="continuous">
+        <origin xyz="-0.11749999999999989619 -0.14500000000000012879 -0.047199999999999998901"
             rpy="3.141592653589793116 -0 1.570796326794896558" />
         <parent link="mobile_base" />
         <child link="punch" />
@@ -252,40 +262,42 @@
         <joint_properties friction="0.0" />
     </joint>
 
-
-    <!-- ................................ BACK CASTER WHEEL  .................................. -->
-
-
-    <link name="punch_2">
+    <link name="punch_3">
         <visual>
-            <origin xyz="0 -2.5948382798830522483e-18 -0.0025000000000000022204"
-                rpy="-1.570796326794896558 -0 0" />
+            <origin xyz="0 0 -0.0025000000000000022204" rpy="-1.570796326794896558 -0 0" />
             <geometry>
                 <mesh filename="package://zero_description/meshes/punch.dae" />
             </geometry>
+            <material name="punch_material">
+                <color
+                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
+            </material>
         </visual>
-       
         <inertial>
             <origin
-                xyz="-0.0068431393429968156647 0.00016629903576519705264 0.0086639006165598608789"
+                xyz="-0.0068431393429968147973 0.00016629903576520025103 0.0086639006165598608789"
                 rpy="0 0 0" />
             <mass value="0.024343445049394188406" />
-            <inertia ixx="3.936356037747538547e-06" ixy="2.905252369172614994e-08"
-                ixz="1.0442385645354997525e-06" iyy="3.838911052433835519e-06"
-                iyz="-5.7082949197628128451e-08" izz="3.4356958911218185951e-06" />
+            <inertia ixx="3.936356037747538547e-06" ixy="2.9052523691726126779e-08"
+                ixz="1.044238564535499329e-06" iyy="3.838911052433837213e-06"
+                iyz="-5.708294919762820786e-08" izz="3.4356958911218185951e-06" />
         </inertial>
     </link>
 
-    <link name="tire_2">
+    <link name="tire_3">
         <visual>
-            <origin xyz="0.013999999999999998557 -0.024999999999999994449 6.2669134736146092533e-18"
+            <origin xyz="0.013999999999999998557 -0.024999999999999994449 1.3877787807814456755e-17"
                 rpy="3.141592653589793116 -0 0" />
             <geometry>
                 <mesh filename="package://zero_description/meshes/tire.dae" />
             </geometry>
+            <material name="tire_material">
+                <color
+                    rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0" />
+            </material>
         </visual>
         <collision>
-            <origin xyz="0.013999999999999998557 -0.024999999999999994449 6.2669134736146092533e-18"
+            <origin xyz="0.013999999999999998557 -0.024999999999999994449 1.3877787807814456755e-17"
                 rpy="3.141592653589793116 -0 0" />
             <geometry>
                 <mesh filename="package://zero_description/meshes/tire.dae" />
@@ -293,17 +305,94 @@
         </collision>
         <inertial>
             <origin
-                xyz="3.4390845797885316593e-08 -3.8281190356537209141e-08 5.1636314884790225824e-09"
+                xyz="3.4390845797885316593e-08 -3.8281190356537209141e-08 5.1636314962080038387e-09"
                 rpy="0 0 0" />
-            <mass value="0.010111416214170885694" />
+            <mass value="0.010111416214170887429" />
             <inertia ixx="8.7315068601895152217e-07" ixy="-3.0554948669053773613e-13"
-                ixz="6.9548210849304582085e-13" iyy="8.7316124768737506048e-07"
-                iyz="-7.7415610040821401145e-13" izz="1.4095955784026028821e-06" />
+                ixz="6.954821084930460228e-13" iyy="8.731612476873749546e-07"
+                iyz="-7.7415610040821411242e-13" izz="1.4095955784026028821e-06" />
         </inertial>
     </link>
 
-    <joint name="backcaster_wheel_joint" type="continuous">
-        <origin xyz="-0.014000000000000012434 -8.601148039062451539e-19 0.022749999999999999389"
+    <joint name="frontleft_casterwheel_joint" type="continuous">
+        <origin xyz="-0.014000000000000012434 0 0.022750000000000006328"
+            rpy="-1.570796326794896558 1.570796326794896336 0" />
+        <parent link="punch_3" />
+        <child link="tire_3" />
+        <axis xyz="0 0 1" />
+        <limit effort="1" velocity="20" />
+        <joint_properties friction="0.0" />
+    </joint>
+
+    <joint name="frontleftcaster_rotation_joint" type="continuous">
+        <origin xyz="0.11749999999999984068 -0.14500000000000007327 -0.04720000000000000584"
+            rpy="3.141592653589793116 -0 1.570796326794896558" />
+        <parent link="mobile_base" />
+        <child link="punch_3" />
+        <axis xyz="0 0 1" />
+        <limit effort="1" velocity="20" />
+        <joint_properties friction="0.0" />
+    </joint>
+
+    
+    <!-- ................................ BACK CASTER WHEEL  .................................. -->
+
+
+
+    <link name="punch_2">
+        <visual>
+            <origin xyz="0 0 -0.0025000000000000022204" rpy="-1.570796326794896558 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/punch.dae" />
+            </geometry>
+            <material name="punch_material">
+                <color
+                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
+            </material>
+        </visual>
+        <inertial>
+            <origin
+                xyz="-0.0068431393429968147973 0.00016629903576520025103 0.0086639006165598608789"
+                rpy="0 0 0" />
+            <mass value="0.024343445049394188406" />
+            <inertia ixx="3.936356037747538547e-06" ixy="2.9052523691726126779e-08"
+                ixz="1.044238564535499329e-06" iyy="3.838911052433837213e-06"
+                iyz="-5.708294919762820786e-08" izz="3.4356958911218185951e-06" />
+        </inertial>
+    </link>
+
+    <link name="tire_2">
+        <visual>
+            <origin xyz="0.013999999999999998557 -0.024999999999999994449 1.3877787807814456755e-17"
+                rpy="3.141592653589793116 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/tire.dae" />
+            </geometry>
+            <material name="tire_material">
+                <color
+                    rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.013999999999999998557 -0.024999999999999994449 1.3877787807814456755e-17"
+                rpy="3.141592653589793116 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/tire.dae" />
+            </geometry>
+        </collision>
+        <inertial>
+            <origin
+                xyz="3.4390845797885316593e-08 -3.8281190356537209141e-08 5.1636314962080038387e-09"
+                rpy="0 0 0" />
+            <mass value="0.010111416214170887429" />
+            <inertia ixx="8.7315068601895152217e-07" ixy="-3.0554948669053773613e-13"
+                ixz="6.954821084930460228e-13" iyy="8.731612476873749546e-07"
+                iyz="-7.7415610040821411242e-13" izz="1.4095955784026028821e-06" />
+        </inertial>
+    </link>
+
+    <joint name="backright_casterwheel_joint" type="continuous">
+        <origin xyz="-0.014000000000000012434 0 0.022749999999999999389"
             rpy="-1.570796326794896558 -1.570796326794896336 0" />
         <parent link="punch_2" />
         <child link="tire_2" />
@@ -312,8 +401,8 @@
         <joint_properties friction="0.0" />
     </joint>
 
-    <joint name="backcaster_rotation_joint" type="continuous">
-        <origin xyz="-9.5525017435414730954e-17 0.14500000000000001776 -0.046699999999999998457"
+    <joint name="backrightcaster_rotation_joint" type="continuous">
+        <origin xyz="-0.11749999999999992395 0.14500000000000007327 -0.047199999999999998901"
             rpy="3.141592653589793116 -0 -1.570796326794896558" />
         <parent link="mobile_base" />
         <child link="punch_2" />
@@ -322,6 +411,80 @@
         <joint_properties friction="0.0" />
     </joint>
 
+
+    <link name="punch_4">
+        <visual>
+            <origin xyz="0 0 -0.0025000000000000022204" rpy="-1.570796326794896558 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/punch.dae" />
+            </geometry>
+            <material name="punch_material">
+                <color
+                    rgba="0.91764705882352937127 0.91764705882352937127 0.91764705882352937127 1.0" />
+            </material>
+        </visual>
+        <inertial>
+            <origin
+                xyz="-0.0068431393429968147973 0.00016629903576520025103 0.0086639006165598608789"
+                rpy="0 0 0" />
+            <mass value="0.024343445049394188406" />
+            <inertia ixx="3.936356037747538547e-06" ixy="2.9052523691726126779e-08"
+                ixz="1.044238564535499329e-06" iyy="3.838911052433837213e-06"
+                iyz="-5.708294919762820786e-08" izz="3.4356958911218185951e-06" />
+        </inertial>
+    </link>
+
+    <link name="tire_4">
+        <visual>
+            <origin xyz="0.013999999999999998557 -0.024999999999999994449 1.3877787807814456755e-17"
+                rpy="3.141592653589793116 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/tire.dae" />
+            </geometry>
+            <material name="tire_material">
+                <color
+                    rgba="0.49803921568627451677 0.49803921568627451677 0.49803921568627451677 1.0" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.013999999999999998557 -0.024999999999999994449 1.3877787807814456755e-17"
+                rpy="3.141592653589793116 -0 0" />
+            <geometry>
+                <mesh filename="package://zero_description/meshes/tire.dae" />
+            </geometry>
+        </collision>
+        <inertial>
+            <origin
+                xyz="3.4390845797885316593e-08 -3.8281190356537209141e-08 5.1636314962080038387e-09"
+                rpy="0 0 0" />
+            <mass value="0.010111416214170887429" />
+            <inertia ixx="8.7315068601895152217e-07" ixy="-3.0554948669053773613e-13"
+                ixz="6.954821084930460228e-13" iyy="8.731612476873749546e-07"
+                iyz="-7.7415610040821411242e-13" izz="1.4095955784026028821e-06" />
+        </inertial>
+    </link>
+
+    <joint name="backleft_casterwheel_joint" type="continuous">
+        <origin xyz="-0.014000000000000012434 0 0.022750000000000006328"
+            rpy="-1.570796326794896558 -1.570796326794896336 0" />
+        <parent link="punch_4" />
+        <child link="tire_4" />
+        <axis xyz="0 0 1" />
+        <limit effort="1" velocity="20" />
+        <joint_properties friction="0.0" />
+    </joint>
+
+    <joint name="backleftcaster_rotation_joint" type="continuous">
+        <origin xyz="0.11749999999999981293 0.14500000000000012879 -0.04720000000000000584"
+            rpy="3.141592653589793116 -0 -1.570796326794896558" />
+        <parent link="mobile_base" />
+        <child link="punch_4" />
+        <axis xyz="0 0 1" />
+        <limit effort="1" velocity="20" />
+        <joint_properties friction="0.0" />
+    </joint>
+
+   
 
     <!-- ................................  PAYLOAD MODULE  .................................. -->
 
