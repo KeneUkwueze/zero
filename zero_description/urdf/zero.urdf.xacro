@@ -56,7 +56,7 @@
 
     <link name="front_depthcamera"/>
     <joint name="front_depthcamera_frame" type="fixed">
-        <origin xyz="-9.0288353571388313412e-08 -0.19999916474089063367 0.030885516604367363458"
+        <origin xyz="-9.028835357507741983e-08 -0.20009916474089065042 0.075885516604367361793"
             rpy="1.570796326794896558 -0 2.6124255799287991292e-16" />
         <parent link="mobile_base" />
         <child link="front_depthcamera" />
@@ -80,14 +80,14 @@
     <!-- ................................ BACK DEPTH CAMERA .................................. -->
 
 
-    <link name="back_depthcamera"/>
+    <!-- <link name="back_depthcamera"/>
     <joint name="back_depthcamera_frame" type="fixed">
         <origin xyz="-9.0288353654655040259e-08 0.19999916474089080021 0.030885516604367439786"
             rpy="1.570796326794896558 -0 -3.141592653589793116" />
         <parent link="mobile_base" />
         <child link="back_depthcamera" />
         <axis xyz="0 0 0" />
-    </joint>
+    </joint> -->
 
 
     <!-- ................................ IMU .................................. -->
